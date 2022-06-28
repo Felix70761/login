@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/css/all.min.css">
+    <link rel="stylesheet" href="/css/fontawesome.min.css">
+    <link rel="stylesheet" href="/webfonts/fa-brands-400.ttf">
+    <link rel="stylesheet" href="/webfonts/fa-brands-400.woff2">
+    <link rel="stylesheet" href="/webfonts/fa-regular-400.ttf">
+</head>
+<body>
+    <!-- <div  class="avatar-button">
+        <button class="close-button">+</button>
+    </div> -->
+
+    <button id="add_new_avatar" type="button" class="avatar-button avatar-button__add-new">+</button>
+    
+    <dialog id="add_avatar_dialog" >
+        <header>
+            <div class="header-title">
+                <span><i class="fa-solid fa-user-plus"></i></span>
+                <h2>New user</h2>
+            </div>
+            <button>+</button>
+        </header>
+        <form method="dialog" >
+         <div class="buttone">   
+        <label for="name">Upload an image </label>
+        <input type="file"><br>
+
+        <button class="clear " id="clear">Clear</button>
+        <button class="cancel " id="cancele">Cancel</button>
+        <button class="button " id="buttone">Confirm</button>
+    </div>
+        </form>
+    </dialog> 
+
+    <script>
+        (function(){
+
+            const addAvatarButtonElement = document.querySelector("#add_new_avatar");
+            const addAvatarDialogElement = document.querySelector("#add_avatar_dialog");
+            
+            if(!addAvatarButtonElement) return;
+            if(!addAvatarDialogElement) return;
+
+            addAvatarButtonElement.onclick = ()=>{
+                addAvatarDialogElement.showModal();
+            }
+
+        })();
+
+      
+
+
+    </script>
+
+</body>
+</html>
